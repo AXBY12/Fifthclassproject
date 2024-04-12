@@ -22,6 +22,14 @@ public class Packet {
     }
 
     public String getProtocol() {
+        return protocol;
+    }
+
+    public void setProtocol() {
         this.protocol = protocol;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
     }
 }

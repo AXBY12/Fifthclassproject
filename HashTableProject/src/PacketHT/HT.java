@@ -1,5 +1,23 @@
 package PacketHT;
 
 public class HT {
-    // this will be the main HashTable class that is the object HT
+    private int[] array;
+
+    public HT(int size) {
+        array = new int[size];
+    }
+
+    private int hash(int sequenceNumber) {
+        return sequenceNumber % array.length;
+    }
+
+    public void insert(int sequenceNumber){
+        int index = hash(sequenceNumber);
+        array[index] = sequenceNumber;
+    }
+
+    public int retrieve(int sequenceNumber) {
+        int index = hash(sequenceNumber);
+        return array[index];
+    }
 }
