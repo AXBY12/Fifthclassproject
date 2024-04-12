@@ -11,9 +11,9 @@ public class HT {
         return sequenceNumber % array.length;
     }
 
-    public void insert(int sequenceNumber){
-        int index = hash(sequenceNumber);
-        array[index] = sequenceNumber;
+    public void insert(long sequenceNumber){
+        int index = hash((int) sequenceNumber);
+        array[index] = (int) sequenceNumber;
     }
 
     public int retrieve(int sequenceNumber) {

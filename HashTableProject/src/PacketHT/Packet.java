@@ -6,18 +6,18 @@ public class Packet {
     private int port;
 
 
-    public Packet(long sequenceNumber, String protocol, int port) {
+    public Packet(int sequenceNumber, String protocol, int port) {
         this.sequenceNumber = sequenceNumber;
         this.protocol = protocol;
         this.port = port;
     }
 
 
-    public long getSequenceNumber() {
-        return sequenceNumber;
+    public int getSequenceNumber() {
+        return (int) sequenceNumber;
     }
 
-    public void setSequenceNumber(long sequenceNumber) {
+    public void setSequenceNumber(int sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
     }
 
